@@ -1,0 +1,45 @@
+.button {
+  @apply inline-flex items-center justify-center rounded-md transform transition-colors;
+  &.button_appearance_filled {
+    @apply hover:bg-blend-darken;
+    &.button_variant_primary {
+      @apply bg-primary text-white;
+    }
+    &.button_variant_secondary {
+      @apply bg-gray-200 text-gray-500 hover:bg-gray-300 hover:text-gray-600;
+    }
+    &.button_variant_success {
+      @apply bg-success text-white hover:bg-success-dark hover:text-white;
+    }
+  }
+  &.button_appearance_ghost {
+    &.button_variant_primary {
+      @apply bg-light-200 text-white hover:bg-primary hover:text-white;
+    }
+    &.button_variant_success {
+      @apply bg-light-200 text-white hover:bg-success hover:text-white;
+    }
+  }
+  &.button_appearance_transparent {
+    &.button_variant_primary {
+      @apply text-black hover:bg-primary hover:text-white;
+    }
+    &.button_variant_success {
+      @apply text-black hover:bg-success hover:text-white;
+    }
+  }
+
+  &.button_size_small {
+    @apply px-3 h-8 text-sm font-normal;
+  }
+  &.button_size_medium {
+    @apply px-4 h-10 text-sm font-medium;
+  }
+  &.button_size_large {
+    @apply px-6 h-14 text-base font-medium;
+  }
+
+  &.button_pill {
+    @apply rounded-3xl;
+  }
+}

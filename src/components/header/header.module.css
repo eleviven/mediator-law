@@ -1,0 +1,21 @@
+.header {
+  @apply sticky z-10 top-0 bg-white;
+  box-shadow: 0 1px rgb(0 0 0 / 5%);
+  & > .header_container {
+    @apply container;
+    & > .header_content {
+      @apply flex items-center justify-between h-17;
+      & .header_nav {
+        @apply flex items-center -mx-1;
+        & > li {
+          @apply mx-1 text-sm font-semibold;
+          & > a {
+            @apply hover:text-primary cursor-pointer;
+          }
+        }
+      }
+      & > .header_collapse {
+      }
+    }
+  }
+}

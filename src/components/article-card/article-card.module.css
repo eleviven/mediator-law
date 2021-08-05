@@ -1,0 +1,25 @@
+.article {
+  @apply relative bg-white;
+  & > .article_image {
+    @apply relative overflow-hidden;
+    & img {
+      @apply w-full object-cover;
+    }
+  }
+  & > .article_content {
+    @apply p-4;
+    & > .article_title {
+      @apply font-medium;
+    }
+    & > .article_date {
+      @apply text-gray-500 font-light text-sm mt-3;
+    }
+  }
+  &:hover {
+    & > .article_content {
+      & > .article_title {
+        @apply text-primary;
+      }
+    }
+  }
+}

@@ -1,0 +1,18 @@
+.footer {
+  @apply relative text-gray-400 bg-gray-100 border-gray-200 border-t text-center py-8 mt-10;
+  & .footer_container {
+    @apply container;
+  }
+  & .footer_inner {
+    @apply flex items-center justify-center flex-col;
+  }
+  & .footer_nav {
+    @apply flex items-center;
+    & > li {
+      @apply mx-3;
+      & > a {
+        @apply block font-normal text-gray-500 hover:text-black;
+      }
+    }
+  }
+}
