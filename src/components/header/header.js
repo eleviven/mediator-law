@@ -2,7 +2,6 @@ import React from "react";
 import Link from "next/link";
 import Button from "../button/button";
 import Brand from "../brand/brand";
-import { PhoneIcon } from "@heroicons/react/outline";
 import { APP } from "../../constants/app";
 import styles from "./header.module.css";
 
@@ -13,19 +12,15 @@ const NAVBAR_LIST = [
   },
   {
     title: "Xidmətlərimiz",
-    url: "/",
-  },
-  {
-    title: "Suallar",
-    url: "/",
+    url: "/services",
   },
   {
     title: "Məqalələr",
-    url: "/",
+    url: "/articles",
   },
   {
     title: "Əlaqə",
-    url: "/",
+    url: "/contact",
   },
 ];
 
@@ -47,14 +42,16 @@ export default function Header() {
             <ul className={styles.header_nav}>
               {NAVBAR_LIST.map((item, index) => (
                 <li key={index}>
-                  <a>
-                    <Button
-                      title={item.title}
-                      variant="primary"
-                      appearance="transparent"
-                      className="font-semibold"
-                    />
-                  </a>
+                  <Link href={item.url}>
+                    <a>
+                      <Button
+                        title={item.title}
+                        variant="primary"
+                        appearance="transparent"
+                        className="font-semibold"
+                      />
+                    </a>
+                  </Link>
                 </li>
               ))}
             </ul>
