@@ -10,13 +10,7 @@ export default function ArticleCard({ title, date, image, className }) {
     <Card className={cn(styles.article, className)}>
       {image && (
         <div className={styles.article_image}>
-          <Image
-            src={image}
-            alt={title}
-            layout="responsive"
-            width={100}
-            height={80}
-          />
+          <img src={image} alt={title} loading="true" />
         </div>
       )}
       {title && (
