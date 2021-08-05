@@ -15,6 +15,9 @@ export default function SocialLinks({ data, className, ...props }) {
             variant="secondary"
             appearance="filled"
             accessoryLeft={<i className={cn("mr-2", item.icon)} />}
+            as="a"
+            href={item.url}
+            target="_blank"
           />
         </li>
       ))}
