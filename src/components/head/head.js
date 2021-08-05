@@ -17,7 +17,7 @@ export default function Head({
   }
   return (
     <NextHead>
-      <title>{title}</title>
+      <title>{title ? `${title} | ${APP.TITLE}` : APP.TITLE}</title>
       <meta name="description" content={description} />
       <meta name="keywords" content={keywords} />
       <meta property="og:title" content={title} />
@@ -38,6 +38,5 @@ export default function Head({
 }
 
 Head.defaultProps = {
-  title: APP.TITLE,
   description: APP.DESCRIPTION,
 };
