@@ -14,6 +14,7 @@ const convertBreadcrumb = (string) => {
       .replace("home", "Ana Səhifə")
       .replace("services", "Xidmətlər")
       .replace("articles", "Məqalələr")
+      .replace("contact", "Əlaqə")
   );
 };
 
