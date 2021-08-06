@@ -1,6 +1,7 @@
 import React from "react";
 import { useRouter } from "next/router";
 import Button from "../button/button";
+import { modal } from "../../contexts/root-modal/root-modal";
 
 export default function Display() {
   const router = useRouter();
@@ -26,6 +27,21 @@ export default function Display() {
                 variant="primary"
                 appearance="ghost"
                 size="large"
+                onClick={() =>
+                  modal.fire({
+                    title: "Necə müraciət edim?",
+                    actions: [
+                      {
+                        title: "Müraciət Et",
+                        variant: "success",
+                        onClick: () => console.log("Clicked!"),
+                      },
+                    ],
+                    render() {
+                      return <h1>Video Frame</h1>;
+                    },
+                  })
+                }
               />
             </div>
           </div>
