@@ -22,7 +22,7 @@ export default function Contact() {
       <Hero title={PAGE.title} showBreadcrumb={true} />
       <section className="md:mb-17">
         <Grid.Container>
-          <Grid className="lg:grid-cols-3 md:grid-cols-3 grid-cols-2 md:gap-8 gap-4">
+          <Grid className="lg:grid-cols-3 sm:grid-cols-2 grid-cols-1 md:gap-8 gap-4">
             {Object.values(APP.CONTACT).map((item, index) => {
               return (
                 <StickCard
@@ -39,7 +39,7 @@ export default function Contact() {
           </Grid>
         </Grid.Container>
       </section>
-      <section className="-mb-10">
+      <section className="-mb-10 mt-10">
         <Map
           mapCenter={APP.MAP_LOCATION.CENTER}
           markerPosition={APP.MAP_LOCATION.MARKER}
