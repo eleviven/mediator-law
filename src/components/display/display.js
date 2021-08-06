@@ -1,7 +1,9 @@
 import React from "react";
+import { useRouter } from "next/router";
 import Button from "../button/button";
 
 export default function Display() {
+  const router = useRouter();
   return (
     <div className="relative bg-cover bg-blend-multiply bg-fixed bg-indigo-600 text-white bg-display">
       <div className="container">
@@ -11,7 +13,12 @@ export default function Display() {
           </h1>
           <div className="flex mt-6">
             <div className="px-2">
-              <Button title="Bizimlə Əlaqə" variant="success" size="large" />
+              <Button
+                title="Bizimlə Əlaqə"
+                variant="success"
+                size="large"
+                onClick={() => router.push("/contact")}
+              />
             </div>
             <div className="px-2">
               <Button
