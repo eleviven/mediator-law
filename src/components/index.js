@@ -13,5 +13,6 @@ export { default as StickCard } from "./stick-card/stick-card";
 export { default as SocialLinks } from "./social-links/social-links";
 export { default as Breadcrumb } from "./breadcrumb/breadcrumb";
 export { default as Map } from "./map/map";
+export { default as Modal } from "./modal/modal";
 export { default as Card } from "./card/card";
 export { default as Grid } from "./grid";
