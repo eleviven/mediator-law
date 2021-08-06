@@ -1,5 +1,5 @@
 export const renderComponent = (component) => {
-  switch (component) {
+  switch (typeof component) {
     case "function":
       return component();
     default:
