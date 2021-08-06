@@ -5,7 +5,7 @@ import Button from "../button/button";
 export default function SocialLinks({ data, className, ...props }) {
   return (
     <ul
-      className={cn("flex items-center justify-center", className)}
+      className={cn("flex items-center", className)}
       {...props}
     >
       {data?.map((item, index) => (

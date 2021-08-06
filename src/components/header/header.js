@@ -24,7 +24,7 @@ const NAVBAR_LIST = [
   },
 ];
 
-const PHONE = APP.CONTACT.PHONE[0];
+const PHONE = APP.CONTACT.PHONE;
 
 export default function Header() {
   return (
@@ -58,9 +58,9 @@ export default function Header() {
           </div>
           <ul className={styles.header_nav}>
             <li>
-              <a href={`tel:${PHONE.url}`} className="flex items-center">
-                {<PHONE.icon width={18} className="mr-2" />}
-                {PHONE.title}
+              <a href={PHONE.data[0].url} className="flex items-center">
+                <PHONE.icon width={18} className="mr-2" />
+                {PHONE.data[0].value}
               </a>
             </li>
           </ul>
