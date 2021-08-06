@@ -1,0 +1,18 @@
+.element {
+  @apply flex items-start p-4;
+  & > .element_icon {
+    @apply w-5 mr-3 mt-1;
+  }
+  & > .element_content {
+    @apply flex-1;
+    & > .element_title {
+      @apply text-gray-400 text-xs font-semibold uppercase;
+    }
+    & .element_content_link {
+      @apply relative inline-block hover:text-primary;
+      & > .element_external_icon {
+        @apply absolute inline-block left-full text-gray-400 w-3.5 ml-1;
+      }
+    }
+  }
+}
