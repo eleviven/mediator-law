@@ -1,5 +1,6 @@
 import React from "react";
 import { Header, Footer } from "../index";
+import { RootModal } from "../../contexts/root-modal/root-modal";
 
 export default function Layout({ children }) {
   return (
@@ -7,6 +8,7 @@ export default function Layout({ children }) {
       <Header />
       {children}
       <Footer />
+      <RootModal />
     </React.Fragment>
   );
 }
