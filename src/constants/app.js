@@ -2,6 +2,7 @@ import {
   PhoneIcon,
   MailIcon,
   LocationMarkerIcon,
+  ChatIcon,
 } from "@heroicons/react/outline";
 
 export const APP = {
@@ -11,27 +12,46 @@ export const APP = {
     "Mediator Hüquq Bakıda yerləşən və bütün növ hüquqi xidmətlər göstərən Azərbaycan hüquq və konsaltinq şirkətidir.",
   DOMAIN: "https://mediator-huquq.az",
   CONTACT: {
-    PHONE: [
-      {
-        title: "+994 12 511 32 85",
-        icon: PhoneIcon,
-        url: "tel:+994125113285",
-      },
-    ],
-    EMAIL: [
-      {
-        title: "info@mediator-huquq.az",
-        icon: MailIcon,
-        url: "mail:info@mediator-huquq.az",
-      },
-    ],
-    LOCATION: [
-      {
-        title: "Nərimanov Həsənoğlu 2",
-        icon: LocationMarkerIcon,
-        url: "#",
-      },
-    ],
+    PHONE: {
+      title: "Telefon",
+      icon: PhoneIcon,
+      data: [
+        {
+          value: "(012) 511 32 85",
+          url: "tel:+994125113285",
+        },
+      ],
+    },
+    WHATSAPP: {
+      title: "WhatsApp",
+      icon: ChatIcon,
+      data: [
+        {
+          value: "+994 50 836 01 01",
+          url: "https://wa.me/994508360101",
+        },
+      ],
+    },
+    EMAIL: {
+      title: "Email",
+      icon: MailIcon,
+      data: [
+        {
+          value: "info@mediator-huquq.az",
+          url: "mailto:info@mediator-huquq.az",
+        },
+      ],
+    },
+    LOCATION: {
+      title: "Ünvan",
+      icon: LocationMarkerIcon,
+      data: [
+        {
+          value: "Nərimanov Həsənoğlu 2",
+          url: "https://www.google.com/maps/place/4a+Hasanoghlu,+Baku,+Azerbaijan/@40.3967393,49.8705186,19.67z/data=!4m5!3m4!1s0x40307d476296de8d:0x72b47ecb68a695f6!8m2!3d40.3967619!4d49.870446?hl=en",
+        },
+      ],
+    },
   },
   SOCIAL: [
     {
@@ -45,6 +65,10 @@ export const APP = {
       icon: "fab fa-instagram",
     },
   ],
+  MAP_LOCATION: {
+    CENTER: [40.396933, 49.870225],
+    MARKER: [40.39696, 49.87043],
+  },
   DEVELOPER: {
     TITLE: "Devob Creative",
     URL: "https://devob.az",
