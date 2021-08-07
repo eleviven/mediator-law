@@ -12,6 +12,13 @@
           & > a {
             @apply hover:text-primary cursor-pointer;
           }
+          & > .header_nav_item {
+            @apply flex items-center rounded-md px-4 h-10 text-sm font-medium transform transition-colors;
+            &:hover,
+            &.active {
+              @apply bg-primary text-white;
+            }
+          }
         }
       }
       & > .header_collapse {

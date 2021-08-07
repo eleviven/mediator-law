@@ -1,7 +1,7 @@
 import React from "react";
 import Link from "next/link";
-import Button from "../button/button";
 import Brand from "../brand/brand";
+import NavLink from "../nav-link/nav-link";
 import { APP } from "../../constants/app";
 import styles from "./header.module.css";
 
@@ -42,16 +42,9 @@ export default function Header() {
             <ul className={styles.header_nav}>
               {NAVBAR_LIST.map((item, index) => (
                 <li key={index}>
-                  <Link href={item.url}>
-                    <a>
-                      <Button
-                        title={item.title}
-                        variant="primary"
-                        appearance="transparent"
-                        className="font-semibold"
-                      />
-                    </a>
-                  </Link>
+                  <NavLink href={item.url} activeClassName={styles.active}>
+                    <a className={styles.header_nav_item}>{item.title}</a>
+                  </NavLink>
                 </li>
               ))}
             </ul>
